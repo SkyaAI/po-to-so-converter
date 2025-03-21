@@ -3,8 +3,7 @@ services:
     name: po-to-so-converter
     env: docker
     repo: https://github.com/SkyaAI/po-to-so-converter
-    buildCommand: docker build -t po-to-so-converter .
-    startCommand: docker run -p 8501:8501 po-to-so-converter
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: PYTHONUNBUFFERED
         value: "true"
