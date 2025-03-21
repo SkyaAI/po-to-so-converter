@@ -1,0 +1,6 @@
+name: Purchase Order to Sales Order Converter
+description: A web application that converts purchase orders from various formats (PDF, image, Excel, Word) into standardized sales order CSV files.
+runtime: streamlit
+build_steps:
+  - pip install python-docx pandas openpyxl pdf2image pytesseract pillow opencv-python-headless pdfplumber
+  - apt-get update && apt-get install -y tesseract-ocr
