@@ -3,7 +3,7 @@ import os
 import tempfile
 import pandas as pd
 from document_parser import parse_document
-from data_extractor import extract_data
+from simplified_data_extractor import extract_data
 from sales_order_generator import generate_sales_order
 from csv_exporter import export_to_csv
 import base64
