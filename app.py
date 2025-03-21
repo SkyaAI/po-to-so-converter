@@ -8,6 +8,15 @@ from sales_order_generator import generate_sales_order
 from csv_exporter import export_to_csv
 import base64
 
+# Handle missing dependencies gracefully
+try:
+    import pytesseract
+    import pdf2image
+    FULL_FUNCTIONALITY = True
+except ImportError:
+    FULL_FUNCTIONALITY = False
+    st.warning("Some dependencies are missing. PDF and image processing may be limited.")
+
 # Set page configuration
 st.set_page_config(
     page_title="Purchase Order to Sales Order Converter",
